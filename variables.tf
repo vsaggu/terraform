@@ -28,3 +28,7 @@ variable "alignment_period" {
 variable "notification_id" {
   description = ""
 }
+
+variable "email_id" {
+  description = ""
+}
