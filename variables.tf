@@ -25,9 +25,9 @@ variable "alignment_period" {
   default = "60s"
 }
 
-variable "notification_id" {
-  description = ""
-}
+# variable "notification_id" {
+#   description = ""
+# }
 
 variable "email_id" {
   description = ""
