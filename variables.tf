@@ -12,6 +12,14 @@ variable "display_name" {
 }
 
 
+
+#### ALERT METRIC
+variable "alert_name" {
+  description = ""
+  default = ""
+}
+
+
 variable "filter" {
   description = ""
   default = "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\""

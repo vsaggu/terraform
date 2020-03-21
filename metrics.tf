@@ -1,6 +1,6 @@
 resource "google_monitoring_alert_policy" "alert_policy" {
   count = "${var.alert_enable ? 1: 0 }"
-  display_name = "${var.display_name}"
+  alert_name = "${var.alert_name}"
   combiner     = "OR"
   #notification_channels = ["${var.notification_id}"]
   notification_channels = ["${google_monitoring_notification_channel.notification_channel.id}"]
