@@ -25,6 +25,11 @@ variable "filter" {
   default = "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\""
 }
 
+variable "threshold_value" {
+  description = ""
+  default = "0"
+}
+
 variable "duration" {
   description = ""
   default = "60s"

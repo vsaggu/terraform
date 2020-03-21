@@ -3,12 +3,13 @@ resource "google_monitoring_alert_policy" "alert_policy" {
   display_name = "${var.alert_name}"
   combiner     = "OR"
   #notification_channels = ["${var.notification_id}"]
-  notification_channels = ["${google_monitoring_notification_channel.notification_channel.id}"]
+  notification_channels = ["${google_monitoring_notification_channel.notification_channel.*.id}"]
 
   conditions {
-    display_name = "test condition"
+    display_name = "${var.alert_name}"
     condition_threshold {
       filter     = "${var.filter}"
+      threshold_value = "${var.threshold_value}"
       duration   = "${var.duration}"
       comparison = "COMPARISON_GT"
       aggregations {
