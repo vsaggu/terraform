@@ -8,7 +8,9 @@ variable "zone" {
 
 variable "display_name" {
   description = ""
+  default = ""
 }
+
 
 variable "filter" {
   description = ""
@@ -25,10 +27,35 @@ variable "alignment_period" {
   default = "60s"
 }
 
-# variable "notification_id" {
-#   description = ""
-# }
-
 variable "email_id" {
   description = ""
+  default = ""
+}
+
+variable "alert_enable" {
+  description = ""
+  default = "0"
+}
+
+####################
+# LOGS BASED METRICS
+variable "logmetric_name" {
+  description = ""
+  default = ""
+}
+variable "logmetric_filter" {
+  description = ""
+  default = ""
+}
+variable "logmetric_metrickind" {
+  description = ""
+  default = "DELTA"
+}
+variable "logmetric_valuetype" {
+  description = ""
+  default = "INT64"
+}
+variable "logmetric_enable" {
+  description = ""
+  default = "0"
 }
