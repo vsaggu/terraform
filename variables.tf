@@ -10,6 +10,15 @@ variable "display_name" {
   description = ""
   default = ""
 }
+variable "notification_id" {
+  description = ""
+  default = []
+  type = "list"
+}
+
+variable "email_id" {
+  description = ""
+}
 
 
 
@@ -18,7 +27,6 @@ variable "alert_name" {
   description = ""
   default = ""
 }
-
 
 variable "filter" {
   description = ""
@@ -38,12 +46,6 @@ variable "duration" {
 variable "alignment_period" {
   description = ""
   default = "60s"
-}
-
-variable "notification_id" {
-  description = ""
-  default = []
-  type = "list"
 }
 
 variable "alert_enable" {
