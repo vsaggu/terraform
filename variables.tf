@@ -40,9 +40,10 @@ variable "alignment_period" {
   default = "60s"
 }
 
-variable "email_id" {
+variable "notification_id" {
   description = ""
-  default = ""
+  default = []
+  type = "list"
 }
 
 variable "alert_enable" {
